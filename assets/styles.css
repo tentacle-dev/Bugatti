@@ -1,0 +1,60 @@
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+.other{
+    position: relative;
+    z-index:2;
+    color: white;
+    font-size: 10px;
+    top: 75%;
+    left: 50%;
+    width: max-content;
+    transform: translate( -50% , -75%);
+}
+
+body,html{
+    overflow-x: hidden;
+    font-family: 'Raleway' , sans-serif;
+}
+.bugatti {
+    position: absolute;
+    top: 0;
+    left : 0;
+    z-index: 1;
+}
+
+nav{
+    color: white;
+    z-index: 2;
+    position: relative;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap : 4rem;
+}
+
+.title {
+    color : white ;
+    z-index: 2;
+    position: absolute;
+    font-size: 24px;
+    top: 75%;
+    left: 50%;
+    width: max-content;
+    transform: translate( -50% , -75%);
+}
+
+
