@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { gsap } from 'gsap';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 
 
 const scene  = new THREE.Scene();
@@ -15,12 +16,13 @@ const scene  = new THREE.Scene();
 // const mesh = new THREE.Mesh( geometry, material );
 // scene.add(mesh);
 
-
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('jsm/libs/draco/gltf/')
 
 
 var loader = new GLTFLoader();
-            
-loader.load( '../assets/bugatti.glb', function ( gltf )
+loader.setDRACOLoader( dracoLoader );
+loader.load( 'assets/bugatti.glb', function ( gltf )
 {
     let car = gltf.scene;  // car 3D object is loaded
     car.position.y = -5;
