@@ -19,16 +19,16 @@ const scene  = new THREE.Scene();
 
 
 
-var loader = new GLTFLoader();
+// var loader = new GLTFLoader();
             
-loader.load( 'public/bugatti.glb', function ( gltf )
-{
-    let car = gltf.scene;  // car 3D object is loaded
-    car.position.y = -5;
+// loader.load( 'public/bugatti.glb', function ( gltf )
+// {
+//     let car = gltf.scene;  // car 3D object is loaded
+//     car.position.y = -5;
 
-    scene.add(car);
-    car.translateZ(10)
-} );
+//     scene.add(car);
+//     car.translateZ(10)
+// } );
 
 const sizes = {
     width : window.innerWidth,
