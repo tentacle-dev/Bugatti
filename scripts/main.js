@@ -1,8 +1,6 @@
-import * as THREE from '../../node_modules/three/build/three.module';
+import * as THREE from 'three';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { gsap } from 'gsap';
-import {OBJLoader} from 'three/examples/jsm/loaders/OBJLoader';
-import {MTLLoader} from 'three/examples/jsm/loaders/MTLLoader';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 
 
