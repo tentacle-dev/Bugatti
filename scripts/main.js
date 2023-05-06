@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { gsap } from 'gsap';
+import {OBJLoader} from 'three/examples/jsm/loaders/OBJLoader';
+import {MTLLoader} from 'three/examples/jsm/loaders/MTLLoader';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 
 
@@ -21,7 +23,7 @@ const scene  = new THREE.Scene();
 
 var loader = new GLTFLoader();
             
-loader.load( 'public/bugatti.glb', function ( gltf )
+loader.load( 'dist/bugatti.glb', function ( gltf )
 {
     let car = gltf.scene;  // car 3D object is loaded
     car.position.y = -5;

@@ -21,7 +21,7 @@ const scene  = new THREE.Scene();
 
 var loader = new GLTFLoader();
             
-loader.load( 'bugatti.glb', function ( gltf )
+loader.load( 'public/bugatti.glb', function ( gltf )
 {
     let car = gltf.scene;  // car 3D object is loaded
     car.position.y = -5;
@@ -66,7 +66,7 @@ rotatebtn.addEventListener('click' , () => {
     rotate = !rotate;
     if(rotate){
         controls.autoRotate = true;
-        controls.rotateSpeed = 15;
+        controls.rotateSpeed = 18;
     } else {
         controls.autoRotate = false;
     }
