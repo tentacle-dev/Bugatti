@@ -66,7 +66,7 @@ rotatebtn.addEventListener('click' , () => {
     rotate = !rotate;
     if(rotate){
         controls.autoRotate = true;
-        controls.rotateSpeed = 18;
+        controls.rotateSpeed = 20;
     } else {
         controls.autoRotate = false;
     }
