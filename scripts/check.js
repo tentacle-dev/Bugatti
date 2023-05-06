@@ -7,14 +7,14 @@ import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 
 const scene  = new THREE.Scene();
 
- const geometry = new THREE.SphereGeometry( 3, 64, 64 );
- const material = new THREE.MeshStandardMaterial({
-     color : "#ffefef" ,
-    roughness : 0.2
-})
+//  const geometry = new THREE.SphereGeometry( 3, 64, 64 );
+//  const material = new THREE.MeshStandardMaterial({
+//      color : "#ffefef" ,
+//     roughness : 0.2
+// })
 
-const mesh = new THREE.Mesh( geometry, material );
-scene.add(mesh);
+// const mesh = new THREE.Mesh( geometry, material );
+// scene.add(mesh);
 
 
 
@@ -128,33 +128,33 @@ const loop = () => {
 loop()
 
 const t1 = gsap.timeline({defaults : {duration : 1}})
-t1.fromTo(mesh.scale , {z : 0 , x: 0, y :0} , { z: 1 , x:1 , y: 1})
+// t1.fromTo(mesh.scale , {z : 0 , x: 0, y :0} , { z: 1 , x:1 , y: 1})
 t1.fromTo('.bugatti' , {y : "-100%"} , {y : '0%'})
 t1.fromTo('nav' , {y : "100%"} , {y : '0%'})
 t1.fromTo('.title' , {opacity : 0} , {opacity : 1})
 t1.fromTo('.other' , {y : "100%"} , { y : "0%"})
 
-let mouseDown = true;
-let rgb = []
-window.addEventListener('mousedown', () => mouseDown = true)
-window.addEventListener('mouseup', () => mouseDown = false)
+// let mouseDown = true;
+// let rgb = []
+// window.addEventListener('mousedown', () => mouseDown = true)
+// window.addEventListener('mouseup', () => mouseDown = false)
 
-window.addEventListener("mousemove", (e) => {
-    if(mouseDown) {
-        rgb = [
-            Math.round((e.pageX / sizes.width) * 255),
-            Math.round((e.pageY / sizes.height) * 255),
-            150,
-        ]
-        let newColor = new THREE.Color(`rgb(${rgb.join(",")})`);
-        gsap.to(mesh.material.color , {
+// window.addEventListener("mousemove", (e) => {
+//     if(mouseDown) {
+//         rgb = [
+//             Math.round((e.pageX / sizes.width) * 255),
+//             Math.round((e.pageY / sizes.height) * 255),
+//             150,
+//         ]
+//         let newColor = new THREE.Color(`rgb(${rgb.join(",")})`);
+//         gsap.to(mesh.material.color , {
 
-            r : newColor.r,
-            g : newColor.g,
-            b : newColor.b,
-        })
-    }
-})
+//             r : newColor.r,
+//             g : newColor.g,
+//             b : newColor.b,
+//         })
+//     }
+// })
 
 
 
